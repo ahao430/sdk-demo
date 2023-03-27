@@ -4,6 +4,7 @@ types/
 src/types/
 releases/
 demo/*
+demo-vue/*
 docs/
 coverage/
 **/node_modules

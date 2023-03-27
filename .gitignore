@@ -11,3 +11,5 @@ cjs
 dist
 .DS_store
 demo/build
+demo-vue/node_modules
+demo-vue/dist
