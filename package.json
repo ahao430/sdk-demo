@@ -1,7 +1,7 @@
 {
   "name": "@ahao430/sdk-demo",
   "author": "ahao430",
-  "version": "1.0.5",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/index.umd.js",
   "module": "dist/index.js",
@@ -53,6 +53,7 @@
     "jsdom": "^21.1.0",
     "mini-types": "^0.1.7",
     "pre-commit": "^1.2.2",
+    "release-it": "^15.9.3",
     "rollup": "^2.79.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-copy": "^3.4.0",
