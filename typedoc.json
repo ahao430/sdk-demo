@@ -1,0 +1,7 @@
+{
+  "inputFiles": ["./modules"],
+  "mode": "modules",
+  "out": "docs",
+  "exclude": "src/index.ts",
+  "theme": "./node_modules/typedoc-neo-theme/bin/default"
+}

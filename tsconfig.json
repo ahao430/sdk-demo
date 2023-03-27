@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+      "target": "es5",
+      "module": "es2015",
+      "lib": [
+          "es2015",
+          "es2016",
+          "es2017",
+          "dom"
+      ],
+      "sourceMap": true,
+      "declaration": false,
+      "typeRoots": [
+        "node_modules/@types",
+        "node_modules/mini-types"
+      ],
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+  },
+  "exclude": [
+      "./test",
+      "node_modules/",
+      "**/node_modules"
+  ]
+}

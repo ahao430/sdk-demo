@@ -1,0 +1,9 @@
+node_modules/
+public/
+types/
+src/types/
+releases/
+demo/*
+docs/
+coverage/
+**/node_modules

@@ -1,0 +1,39 @@
+html, body, div, p, h1, h2, h3, h4, h5, h6, ul, li{
+  margin: 0;
+  padding: 0;
+}
+ul, li{
+  list-style: none;
+}
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  width: 100%;
+  min-height: 100%;
+}
+
+.title{
+  font-weight: bold;
+  padding: 20px;
+}
+
+#banner1{
+  text-indent: 2em;
+}
+
+#banner2{
+  width: 100%;
+}
+#banner2 img{
+  width: 100%;
+  height: auto;
+}
+
+#float{
+  position: fixed;
+  z-index: 999;
+}
