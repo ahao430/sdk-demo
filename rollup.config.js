@@ -47,7 +47,7 @@ const entry = runEnv === 'h5' ? 'src/index.ts' : 'src/index.zfb.ts'
 /**
  * 配置不同打包方式输出目录
  */
-const outputDir = production ? 'dist' : 'demo/public'
+const outputDir = 'dist'
 
 const outPutName = runEnv === 'h5' ? 'index' : 'zfb'
 
@@ -97,9 +97,12 @@ export default defineConfig([{
     production && terser(),
 
     /** 打包时对js进行压缩 */
-    release && copy({
+    copy({
       targets: [
-        { src: 'dist/*', dest: 'releases' }
+        { src: 'dist/*', dest: 'releases' },
+        { src: 'dist/*', dest: 'demo/public' },
+        { src: 'dist/*', dest: 'demo-vue/public' },
+        { src: 'dist/*', dest: 'demo-miniapp/libs' },
       ]
     })
   ],

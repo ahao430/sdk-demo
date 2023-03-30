@@ -65,11 +65,27 @@ const ajax = async (url, data, options) => {
     const authCode = await getBaseAuthCode()
     data.authCode = authCode
 
-    const config = requestInterceptor({
-      url,
-      data,
-      ...options,
-    })
+    // authcode
+    if (host !== 'xh') {
+      data.authCode = await getBaseAuthCode()
+    }
+
+    let config
+    if (method === 'GET') {
+      config = {
+        ...options,
+        url,
+        params: data,
+      }
+    } else {
+      config = {
+        ...options,
+        url,
+        data,
+      }
+    }
+
+    config = requestInterceptor(config)
 
     const response = await new Promise((resolve, reject) => {
       let formatUrl = config.baseURL + url
@@ -115,14 +131,13 @@ const ajax = async (url, data, options) => {
   }
 }
 
-const get = (url, data, options) => ajax(url, {}, {
+const get = (url, data, options) => ajax(url, data, {
+  method: 'GET',
   ...options,
-  params: data,
-  method: 'GET'
 })
 const post = (url, data, options) => ajax(url, data, {
+  method: 'POST',
   ...options,
-  method: 'POST'
 })
 
 export default {
